@@ -5,83 +5,80 @@
     box-sizing: border-box;
     font-family: "Merriweather", serif;
 }
-
 body{
-    width: 100%;
-    min-height: 100vh;
-    background-color: #FFC55A;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 100px;
+    background-color: #874CCC;
+    color: #000;
 }
-
 .container{
-    padding: 5px;
-    /* background-color: white; */
-    width: 100%;
-    max-width: 500px;
-
+    width: 90%;
+    max-width: 592px;
+    margin: 100px auto 0;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
 }
-
-.container .search{
+.inputdiv{
     width: 100%;
     display: flex;
-    margin-bottom: 1rem;
+    margin: 10px 0;
 }
-.search input{
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 1.125rem;
-    padding: 6px 0px 6px 15px ;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-.search button{
-    border: none;
-    outline: none;
-    font-size: 1.125rem;
-    padding: 4px 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #FC4100;
-    color: #fff;
-    cursor: pointer;
-}
-
-.container .list{
-    width: 100%;
-}
-.list ul{
-    list-style: none;
-}
-ul li{
-    height: 30px;
-    line-height: 30px;
-    padding-left: 35px;
-    margin-bottom: 5px;
-    background-color: #fff;
+.inputdiv i{
     position: relative;
     cursor: pointer;
+    padding: 10px;
+    background-color: #874CCC;
+    color: #fff;
+    border-radius: 3px;
+    display: none;
 }
-li.success{
-    text-decoration: line-through;
-    color: rgba(0, 0, 0, 0.7);
+i.active{
+    display: block;
 }
-.fa-check-circle{
+.inputdiv i:hover::after{
     position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-right: 10px;    
-    color: green;
+    bottom: -30px;
+    left: -50%;
+    padding: 5px;
+    font-size: 12px;
+    background-color: #874CCC;
+    color: #fff;
+    width: 120px;
 }
-.fa-trash{
-    position: absolute;
-    right: 10px;
-    top:50%;
-    transform: translateY(-50%);
+.inputdiv i.fa-moon:hover::after{
+    content: 'Night Mode';
+}
+.inputdiv i.fa-sun:hover::after{
+    content: 'Day Mode';
+}
+.inputdiv button{
     cursor: pointer;
-    color: red;
+    padding: 6px 12px;
+    border: none;
+    outline: none;
+    background-color: #874CCC;
+    color: #fff;
+    margin: 0 5px;
+}
+.inputdiv input{
+    flex: 1;
+    border: 2px solid #874CCC;
+    outline: none;
+    padding-left: 15px;
+    color: #874CCC;
+    background-color: transparent;
+}
+.listitems{
+    width: 100%;
+    
+}
+ul li{
+    list-style: none;
+    text-align: left;
+    padding: 5px 5px 5px 20px;
+    margin-bottom: 10px;
+    line-height: 1rem;
+    border: 1px solid #874CCC;
+}
+ul li input{
+    margin-right: 10px;
 }
