@@ -110,6 +110,7 @@ i.fa-trash:hover::after{
         flex-direction: column;
     }   
     .inputdiv div{
+        flex-direction: row;
         justify-content: center;
     }
 }
