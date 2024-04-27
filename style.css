@@ -42,7 +42,7 @@ i.active{
     font-size: 12px;
     background-color: #874CCC;
     color: #fff;
-    width: 120px;
+    width: 80px;
 }
 .inputdiv i.fa-moon:hover::after{
     content: 'Night Mode';
@@ -81,4 +81,21 @@ ul li{
 }
 ul li input{
     margin-right: 10px;
+}
+ul li i.fa-trash{
+    cursor: pointer;
+    position: relative;
+    float: right;
+    color: red;
+}
+i.fa-trash:hover::after{
+    position: absolute;
+    bottom: -30px;
+    left: -50%;
+    padding: 5px;
+    font-size: 12px;
+    background-color: #874CCC;
+    color: #fff;
+    width: 80px;
+    content: 'Delete item';
 }
