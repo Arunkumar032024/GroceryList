@@ -21,6 +21,11 @@ body{
     width: 100%;
     display: flex;
     margin: 10px 0;
+    gap: 10px;
+}
+.inputdiv div{
+    display: flex;
+    gap: 10px;
 }
 .inputdiv i{
     position: relative;
@@ -57,12 +62,12 @@ i.active{
     outline: none;
     background-color: #874CCC;
     color: #fff;
-    margin: 0 5px;
 }
 .inputdiv input{
     flex: 1;
     border: 2px solid #874CCC;
     outline: none;
+    padding: 10px;
     padding-left: 15px;
     color: #874CCC;
     background-color: transparent;
@@ -98,4 +103,13 @@ i.fa-trash:hover::after{
     color: #fff;
     width: 80px;
     content: 'Delete item';
+}
+
+@media (max-width:414px) {
+    .inputdiv{
+        flex-direction: column;
+    }   
+    .inputdiv div{
+        justify-content: center;
+    }
 }
