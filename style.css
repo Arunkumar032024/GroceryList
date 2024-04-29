@@ -14,8 +14,9 @@ body{
     max-width: 592px;
     margin: 100px auto 0;
     background-color: #fff;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
+    border-radius: 5px;
 }
 .inputdiv{
     width: 100%;
@@ -47,7 +48,7 @@ i.active{
     font-size: 12px;
     background-color: #874CCC;
     color: #fff;
-    width: 80px;
+    width: 100px;
 }
 .inputdiv i.fa-moon:hover::after{
     content: 'Night Mode';
@@ -72,28 +73,27 @@ i.active{
     color: #874CCC;
     background-color: transparent;
 }
-.listitems{
+.list-container{
     width: 100%;
-    
-}
-ul li{
     list-style: none;
-    text-align: left;
-    padding: 5px 5px 5px 20px;
-    margin-bottom: 10px;
-    line-height: 1rem;
-    border: 1px solid #874CCC;
 }
-ul li input{
-    margin-right: 10px;
+.list-container li{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #874CCC;
 }
-ul li i.fa-trash{
+.list-container li.delete{
+    text-decoration: line-through;
+    color: #555;
+}
+span.fa-trash{
+    color: red;
     cursor: pointer;
     position: relative;
-    float: right;
-    color: red;
 }
-i.fa-trash:hover::after{
+span.fa-trash:hover::after{
     position: absolute;
     bottom: -30px;
     left: -50%;
@@ -101,7 +101,7 @@ i.fa-trash:hover::after{
     font-size: 12px;
     background-color: #874CCC;
     color: #fff;
-    width: 80px;
+    width: 100px;
     content: 'Delete item';
 }
 
